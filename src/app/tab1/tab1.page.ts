@@ -16,8 +16,13 @@ export class Tab1Page implements OnInit {
     this.permission = permissionsStatus.display;
   }
 
-  async scheduleLocalNotification() {
-    const notification: LocalNotificationSchema = {title: 'Title', body: 'Here is the notification', id: 123};
+  async scheduleLocalNotification(sound?: string) {
+    const notification: LocalNotificationSchema = {
+      id: 123,
+      title: 'Title', 
+      body: 'Here is the notification', 
+      sound: sound
+    };
     const options: ScheduleOptions = {notifications: [notification]};
     const result: ScheduleResult = await LocalNotifications.schedule(options);
     console.log(result);

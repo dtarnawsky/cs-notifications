@@ -12,5 +12,6 @@
   </ion-header>
 
   <p>Local Notifications: {{permission}}</p>
-  <ion-button (click)="scheduleLocalNotification()">Schedule Local Notification</ion-button>
+  <ion-button (click)="scheduleLocalNotification(undefined)">Schedule Local Notification</ion-button>
+  <ion-button (click)="scheduleLocalNotification('')">Schedule Local Notification With Sound</ion-button>
 </ion-content>
