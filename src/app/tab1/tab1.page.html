@@ -10,4 +10,7 @@
       <ion-title>Notifications</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <p>Local Notifications: {{permission}}</p>
+  <ion-button (click)="scheduleLocalNotification()">Schedule Local Notification</ion-button>
 </ion-content>
